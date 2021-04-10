@@ -109,8 +109,14 @@ def save_qualifying_loans(qualifying_loans):
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
+        csvpath (Path): The csv file path.
+    
+    Returns:
+
+    A CSV file that contains the rows of data from the application.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
+    csvpath = Path(qualifying_loans)
     save_qualifying_loans(save_csv)
     return save_csv(csvpath)
 
