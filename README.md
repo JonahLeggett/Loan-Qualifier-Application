@@ -1,6 +1,6 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+*This is a command line application to match applicants with qualifying loans. It will allow applicants to download results as a csv file so they can share their results in an Excel Spreadsheet*
 
 ---
 

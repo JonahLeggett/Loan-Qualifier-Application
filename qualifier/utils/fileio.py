@@ -28,3 +28,20 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+def save_csv(csvpath):
+    """Writes a CSV file to a new Path.
+
+    Args:
+        csvpath (Path): The csv file path.
+
+    Returns:
+        A CSV file that contains the rows of data from the application.
+
+    """
+    with open(csvpath, "w", newline='') as csvfile:
+        data = []
+        csvwriter = csv.writer(csvfile)
+        for row in csvwriter:
+            csvwriter.writerow(row.values())
+    return data
