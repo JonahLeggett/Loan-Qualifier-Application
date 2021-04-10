@@ -112,7 +112,7 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     save_qualifying_loans(save_csv)
-    return save_csv
+    return save_csv(csvpath)
 
 
 def run():
