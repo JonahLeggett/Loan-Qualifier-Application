@@ -116,13 +116,11 @@ def save_qualifying_loans(qualifying_loans):
     A CSV file that contains the rows of data from the application.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    answer = questionary.confirm("Would you like to save your qualifying loans as a CSV file?").ask()
-    if answer == True:
+    csvpath = questionary.confirm("Would you like to save your qualifying loans as a CSV file?").ask()
+    if csvpath:
         csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
-    
-        csvpath = Path(qualifying_loans)
-        save_qualifying_loans(save_csv)
-        return save_csv(csvpath)
+        csvpath = Path(csvpath)
+        save_csv(Path(csvpath), qualifying_loans)
 
 
 def run():
@@ -145,3 +143,4 @@ def run():
 
 if __name__ == "__main__":
     fire.Fire(run)
+    

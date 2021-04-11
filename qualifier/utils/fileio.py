@@ -5,7 +5,7 @@ This contains a helper function for loading and saving CSV files.
 
 """
 import csv
-
+from pathlib import Path
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -29,19 +29,16 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-def save_csv(csvpath):
-    """Writes a CSV file to a new Path.
+def save_csv(csvpath, data, header = None):
 
-    Args:
-        csvpath (Path): The csv file path.
+    #header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
 
-    Returns:
-        A CSV file that contains the rows of data from the application.
+    #csvpath = Path("qualified_loans.csv")
 
-    """
-    with open(csvpath, "w", newline='') as csvfile:
-        data = []
+    with open(csvpath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        for row in csvwriter:
-            csvwriter.writerow(row.values())
-    return data
+        if header:
+            csvwriter.writerow(header)
+        csvwriter.writerows(data)
+
+        
