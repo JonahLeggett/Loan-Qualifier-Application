@@ -39,7 +39,7 @@ python app.py
 
 Upon launching the loan qualifier application you will be greeted with the following prompts.
 
-![Loan Qualifier Prompts](loan_qualifier.png)
+![Loan Qualifier Prompts](images/loan_qualifier.png)
 
 Finally, choose a file path to save your csv containing your qualified loans and enter when prompted. 
 
