@@ -6,34 +6,53 @@
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This project leverages python 3.7 with the following packages:
+
+
+* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+
+* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
+
+* [pytest](https://docs.pytest.org/en/stable/) - For basic assertion testing of financial calculators and filters, and filio.
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application first install the following dependencies.
 
----
-
-## Examples
-
-This section should include screenshots, code blocks, or animations showing how your project works.
+```python
+pip install fire
+pip install questionary
+pip install pytest
+```
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To use the loan qualifier application simply clone the repository and run the **app.py** with:
+
+```python
+python app.py
+```
+
+Upon launching the loan qualifier application you will be greeted with the following prompts.
+
+![Loan Qualifier Prompts](Loan-Qualifier-Application/loan_qualifier.png)
+
+Finally, choose a file path to save your csv containing your qualified loans and enter when prompted. 
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project; since you may want to be reached by recruiters or potential collaborators, include your contact e-mail, and optionally your LinkedIn or Twitter profile.
+Brought to you by Jonah A. Leggett. You can reach me at jonah.leggett@gmail.com 
+
+You can add me at LinkedIn: (https://www.linkedin.com/in/jonah-l-29278a8a/)
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify others what they can and can not do with your source code and files. Use this section to include the licence you want to use.
+mit
